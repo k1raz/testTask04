@@ -1,0 +1,15 @@
+type = "js"
+client-main = "index.js"
+client-files = [
+  "*"
+]
+
+required-permissions = [
+  "Screen Capture",
+  "WebRTC",
+  "Clipboard Access",
+  "Extended Voice API"
+]
+
+[config]
+bridge-main = true

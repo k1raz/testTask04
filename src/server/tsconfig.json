@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": [
+//      "../../node_modules/@altv/types-server",
+      "../../node_modules/@types/ragemp-s",
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": ["../shared/*"],
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["./**/*.ts", "../shared/**/*.ts"],
+  "exclude": ["../shared/**/*.d.ts", "node_modules"]
+}

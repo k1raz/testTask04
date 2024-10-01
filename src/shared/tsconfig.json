@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+//    "types": [
+//      "../../node_modules/@altv/types-client",
+//      "../../node_modules/@altv/types-server",
+//    ],
+  },
+  "extends": "../../../tsconfig.base.json",
+  "include": ["./**/*.ts"]
+}

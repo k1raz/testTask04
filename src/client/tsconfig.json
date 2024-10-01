@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "strictPropertyInitialization": true,
+    /*"types": [
+      "../node_modules/@altv/types-client",
+      "../node_modules/@altv/types-natives",
+      "./@types"
+    ],*/
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": ["../shared/*"],
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["./**/*.ts","../shared/**/*.ts","./**/*.xml"],
+  "exclude": ["../shared/**/*.d.ts", "node_modules"]
+}
