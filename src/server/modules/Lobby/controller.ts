@@ -50,7 +50,7 @@ class LobbyController {
 	private OnVehicleDamage(vehicle: VehicleMp, bodyHealthLoss: number, engineHealthLoss: number): void {
 		vehicle.setVariable(VehicleInfo.VEHICLEHEALTH, vehicle.engineHealth);
 
-		let player = mp.players.toArray().find((player) => player.vehicle == vehicle);
+		const player = mp.players.toArray().find((player) => player.vehicle == vehicle);
 
 		if (vehicle.engineHealth <= 900) {
 			LobbyHandler.kill(player);
@@ -63,7 +63,7 @@ class LobbyController {
 	private OnVehicleDeath(vehicle: VehicleMp): void {
 		vehicle.destroy();
 
-		let player = mp.players.toArray().find((player) => player.vehicle == vehicle);
+		const player = mp.players.toArray().find((player) => player.vehicle == vehicle);
 		LobbyHandler.kill(player);
 	}
 

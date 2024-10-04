@@ -49,7 +49,7 @@ class LobbyHandler {
 
 			if (lobby.lobbyInfo.amountOfPlayers != lobby.playerList.size) return;
 
-			for (let playerInList of lobby.playerList) {
+			for (const playerInList of lobby.playerList) {
 				playerInList.position = lobby.mapInfo.spawnPosition.get(0);
 
 				setTimeout(() => {
@@ -106,7 +106,7 @@ class LobbyHandler {
 		if (lobbyList.has(id)) {
 			let lobby: Lobby = lobbyList.get(id);
 
-			for (let playerInList of lobby.playerList) {
+			for (const playerInList of lobby.playerList) {
 				playerInList.vehicle.destroy();
 				playerInList.dimension = 0;
 			}
@@ -144,7 +144,7 @@ class LobbyHandler {
 			let lobby: Lobby = lobbyList.get(lobbyId);
 
 			if (lobby.lobbyInfo.amountOfWinners == lobby.playerList.size) {
-				for (let player of lobby.playerList) {
+				for (const player of lobby.playerList) {
 					player.notify("Вы победитель");
 				}
 			}

@@ -10,7 +10,7 @@ mp.events.add("render", () => {
 			veh.setPetrolTankHealth(-1);
 		}
 
-		let playerPos = mp.players.local.position;
+		const playerPos = mp.players.local.position;
 		let vehDist = mp.game.gameplay.getDistanceBetweenCoords(
 			playerPos.x,
 			playerPos.y,
